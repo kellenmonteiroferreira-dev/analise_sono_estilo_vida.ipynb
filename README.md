@@ -144,6 +144,6 @@ Inclusão de variáveis adicionais
 
 Criação de dashboards interativos
 
- Autora
+ Autora: Kellen Ferreira
 
 Projeto desenvolvido como parte do processo de aprendizado em análise de dados, com foco em desenvolvimento de portfólio profissional.
