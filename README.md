@@ -114,7 +114,7 @@ Heatmap de correlação
 
 Gráficos interativos
 
- Principais Insights
+ #Principais Insights
 
 O nível de estresse apresentou forte relação negativa com a qualidade do sono
 
@@ -128,7 +128,7 @@ Variáveis de saúde como IMC e pressão arterial demonstraram associação com 
 
 A atividade física, isoladamente, apresentou menor impacto na qualidade do sono
 
- Conclusão
+ #Conclusão
 
 Os resultados indicam que a qualidade do sono é influenciada por múltiplos fatores, sendo o estresse o principal elemento associado. A análise também sugere a existência de relações entre variáveis de saúde e estilo de vida, reforçando a importância de uma abordagem integrada para o bem-estar.
 
