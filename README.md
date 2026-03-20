@@ -49,7 +49,7 @@ Distúrbios do Sono
 
 Durante a análise, algumas colunas foram tratadas e ajustadas para melhor interpretação, incluindo a remoção de variáveis irrelevantes como identificadores únicos.
 
- Tecnologias Utilizadas
+ Tecnologias:
 
 Python
 
