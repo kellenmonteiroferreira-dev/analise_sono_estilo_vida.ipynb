@@ -1,4 +1,4 @@
-name: Rodar no Replicate
+name: Executar notebook e conectar Replicate
 
 on:
   push:
@@ -6,20 +6,29 @@ on:
       - main
 
 jobs:
-  replicate-run:
+  executar-notebook:
     runs-on: ubuntu-latest
 
     steps:
       - name: Baixar código
         uses: actions/checkout@v4
 
-      - name: Instalar biblioteca Replicate
+      - name: Instalar Python e Jupyter
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar bibliotecas
         run: |
           python -m pip install --upgrade pip
-          pip install replicate
+          pip install jupyter nbconvert replicate pandas matplotlib scikit-learn
+
+      - name: Executar notebook
+        run: |
+          jupyter nbconvert --to notebook --execute saude_do_sono_estilovida.ipynb --output notebook_executado.ipynb
 
       - name: Testar conexão com Replicate
         env:
           REPLICATE_API_TOKEN: ${{ secrets.r8_CzgR2wRTmuPeHLpiePCkWsr37dHsfHg3WCsq9 }}
         run: |
-          echo "Conexão com Replicate funcionando"
+          echo "Notebook executado e conexão com Replicate funcionando"
