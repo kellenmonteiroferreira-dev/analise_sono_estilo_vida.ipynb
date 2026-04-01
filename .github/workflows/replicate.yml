@@ -1,4 +1,4 @@
-name: Teste Workflow
+name: Rodar no Replicate
 
 on:
   push:
@@ -6,12 +6,20 @@ on:
       - main
 
 jobs:
-  teste:
+  replicate-run:
     runs-on: ubuntu-latest
 
     steps:
       - name: Baixar código
         uses: actions/checkout@v4
 
-      - name: Mostrar arquivos
-        run: ls
+      - name: Instalar biblioteca Replicate
+        run: |
+          python -m pip install --upgrade pip
+          pip install replicate
+
+      - name: Testar conexão com Replicate
+        env:
+          REPLICATE_API_TOKEN: ${{ r8_CzgR2wRTmuPeHLpiePCkWsr37dHsfHg3WCsq9 }}
+        run: |
+          echo "Conexão com Replicate funcionando"
