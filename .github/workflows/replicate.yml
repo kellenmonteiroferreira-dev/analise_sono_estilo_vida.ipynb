@@ -27,8 +27,9 @@ jobs:
         run: |
           jupyter nbconvert --to notebook --execute saude_do_sono_estilovida.ipynb --output notebook_executado.ipynb
 
-      - name: Testar conexão com Replicate
+      - name: Rodar modelo no Replicate
         env:
-          REPLICATE_API_TOKEN: ${{ secrets.r8_CzgR2wRTmuPeHLpiePCkWsr37dHsfHg3WCsq9 }}
+          REPLICATE_API_TOKEN: ${{ secrets.R8_CzgR2wRTmuPeHLpiePCkWsr37dHsfHg3WCsq9 }}
         run: |
-          echo "Notebook executado e conexão com Replicate funcionando"
+          replicate run <NOME_DO_MODELO> \
+            --input file=@resumo_sono.csv
