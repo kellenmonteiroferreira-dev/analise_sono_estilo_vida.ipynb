@@ -20,6 +20,6 @@ jobs:
 
       - name: Testar conexão com Replicate
         env:
-          REPLICATE_API_TOKEN: ${{ r8_CzgR2wRTmuPeHLpiePCkWsr37dHsfHg3WCsq9 }}
+          REPLICATE_API_TOKEN: ${{ secrets.r8_CzgR2wRTmuPeHLpiePCkWsr37dHsfHg3WCsq9 }}
         run: |
           echo "Conexão com Replicate funcionando"
